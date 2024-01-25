@@ -53,8 +53,17 @@
             console.profileEnd()
             console.log('profil stoppé, allez dans votre onglet performance ')
         }
-        consoleTrace = () => {
+        const fonction1 = () => {
+            fonction2()
+        }
+        const fonction2 = () => {
+            fonctionTrace()
+        }
+        const fonctionTrace = () => {
             console.trace()
+        }
+        consoleTrace = () => {
+            fonction1()
         }
         consoleClear = () => {
             console.clear()
