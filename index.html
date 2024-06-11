@@ -1,116 +1,10 @@
 <!DOCTYPE html>
-<script type="text/javascript">
-    const array = [
-        {prenom: 'Simon', nom: 'Belbeoch', poly: 'sibe'},
-        {prenom: 'Paul', nom: 'Maurice', poly: 'mapa'},
-        {prenom: 'Jacques', nom: 'Thimbault', poly: 'thija'},
-        {prenom: 'Jean', nom: 'Pierre', poly: 'pije'},
-
-    ]
-    recupererLaSaisie = () => {
-        return document.querySelector("#data").value
-    }
-    consoleGroup = () => {
-        const saisie = recupererLaSaisie()
-        if (saisie) {
-            console.group(saisie)
-        } else {
-            console.group()
-        }
-    }
-    consoleGroupEnd = () => {
-        console.groupEnd()
-    }
-    consoleCount = () => {
-        const saisie = recupererLaSaisie()
-        console.count(saisie)
-    }
-    consoleReset = () => {
-        const saisie = recupererLaSaisie()
-        if (saisie) {
-            console.reset(saisie)
-        } else {
-            console.reset()
-        }
-    }
-    consoleLog = () => {
-        const saisie = recupererLaSaisie()
-        console.log(saisie)
-    }
-    consoleWarn = () => {
-        const saisie = recupererLaSaisie()
-        console.warn(saisie)
-    }
-    consoleInfo = () => {
-        const saisie = recupererLaSaisie()
-        console.info(saisie)
-    }
-    consoleError = () => {
-        const saisie = recupererLaSaisie()
-        console.error(saisie)
-    }
-    consoleStartTime = () => {
-        const saisie = recupererLaSaisie()
-        console.time(saisie)
-        console.log('timer démarré pour ' + saisie)
-    }
-    consoleTimeLog = () => {
-        const saisie = recupererLaSaisie()
-        console.timeLog(saisie)
-    }
-    consoleStopTime = () => {
-        const saisie = recupererLaSaisie()
-        console.timeEnd(saisie)
-    }
-    consoleStartProfile = () => {
-        console.profile()
-        console.log('profil démarré')
-    }
-    consoleStopProfile = () => {
-        console.profileEnd()
-        console.log('profil stoppé, allez dans votre onglet performance ')
-    }
-    const fonction1 = () => {
-        fonction2()
-    }
-    const fonction2 = () => {
-        fonctionTrace()
-    }
-    const fonctionTrace = () => {
-        console.trace()
-    }
-    consoleTrace = () => {
-        fonction1()
-    }
-    consoleClear = () => {
-        console.clear()
-    }
-    consoleAssert = () => {
-        const saisie = recupererLaSaisie()
-        console.assert(saisie.value)
-    }
-    consoleTable = () => {
-        console.log('console.log >')
-        console.log(array)
-        console.log('console.table >')
-        console.table(array)
-    }
-    consoleDir = () => {
-        const dir = document.querySelector("html")
-        console.log('console.log >')
-        console.log(dir)
-        console.log('console.dir >')
-        console.dir(dir)
-        console.log('console.dirXml >')
-        console.dirxml(dir)
-    }
-</script>
-<link rel="stylesheet" href="./style.css"></link>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>à la découverte de la console</title>
-    <script type="application/javascript">
+    <link rel="stylesheet" href="./style.css">
+    <script>
         const uneFonctionAvecDebugger = () => {
             const a = 2
             const b = 2
@@ -118,16 +12,120 @@
             const c = 3
             return a + b * c
         }
+        const array = [
+            {prenom: 'Simon', nom: 'Belbeoch', poly: 'sibe'},
+            {prenom: 'Paul', nom: 'Maurice', poly: 'mapa'},
+            {prenom: 'Jacques', nom: 'Thimbault', poly: 'thija'},
+            {prenom: 'Jean', nom: 'Pierre', poly: 'pije'},
+
+        ]
+        recupererLaSaisie = () => {
+            return document.querySelector("#data").value
+        }
+        consoleGroup = () => {
+            const saisie = recupererLaSaisie()
+            if (saisie) {
+                console.group(saisie)
+            } else {
+                console.group()
+            }
+        }
+        consoleGroupEnd = () => {
+            console.groupEnd()
+        }
+        consoleCount = () => {
+            const saisie = recupererLaSaisie()
+            console.count(saisie)
+        }
+        consoleReset = () => {
+            const saisie = recupererLaSaisie()
+            if (saisie) {
+                console.reset(saisie)
+            } else {
+                console.reset()
+            }
+        }
+        consoleLog = () => {
+            const saisie = recupererLaSaisie()
+            console.log(saisie)
+        }
+        consoleWarn = () => {
+            const saisie = recupererLaSaisie()
+            console.warn(saisie)
+        }
+        consoleInfo = () => {
+            const saisie = recupererLaSaisie()
+            console.info(saisie)
+        }
+        consoleError = () => {
+            const saisie = recupererLaSaisie()
+            console.error(saisie)
+        }
+        consoleStartTime = () => {
+            const saisie = recupererLaSaisie()
+            console.time(saisie)
+            console.log('timer démarré pour ' + saisie)
+        }
+        consoleTimeLog = () => {
+            const saisie = recupererLaSaisie()
+            console.timeLog(saisie)
+        }
+        consoleStopTime = () => {
+            const saisie = recupererLaSaisie()
+            console.timeEnd(saisie)
+        }
+        consoleStartProfile = () => {
+            console.profile()
+            console.log('profil démarré')
+        }
+        consoleStopProfile = () => {
+            console.profileEnd()
+            console.log('profil stoppé, allez dans votre onglet performance ')
+        }
+        const fonction1 = () => {
+            fonction2()
+        }
+        const fonction2 = () => {
+            fonctionTrace()
+        }
+        const fonctionTrace = () => {
+            console.trace()
+        }
+        consoleTrace = () => {
+            fonction1()
+        }
+        consoleClear = () => {
+            console.clear()
+        }
+        consoleAssert = () => {
+            const saisie = recupererLaSaisie()
+            console.assert(saisie.value)
+        }
+        consoleTable = () => {
+            console.log('console.log >')
+            console.log(array)
+            console.log('console.table >')
+            console.table(array)
+        }
+        consoleDir = () => {
+            const dir = document.querySelector("html")
+            console.log('console.log >')
+            console.log(dir)
+            console.log('console.dir >')
+            console.dir(dir)
+            console.log('console.dirXml >')
+            console.dirxml(dir)
+        }
     </script>
-</head>
-<body>
-<h1>Découverte de la console</h1>
-<h2>Commandes : </h2>
-<p>Pour les commandes précédées d'un astérisque * saisir une valeur dans le champ</p>
-<div>
-    <label for="data">valeur</label><input id="data" placeholder="valeur"/>
-</div>
-<div class="groupement">
+  </head>
+  <body>
+  <h1>Découverte de la console</h1>
+  <h2>Commandes : </h2>
+  <p>Pour les commandes précédées d'un astérisque * saisir une valeur dans le champ</p>
+  <div>
+    <label for="data">valeur</label><input id="data" placeholder="valeur">
+  </div>
+  <div class="groupement">
     <button onclick="consoleGroup()">console.group</button>
     <button class="with-value" onclick="consoleLog()">* console.log</button>
     <button class="with-value" onclick="consoleTable()">console.table</button>
@@ -135,26 +133,26 @@
     <button class="with-value" onclick="consoleWarn()">* console.warn</button>
     <button class="with-value" onclick="consoleError()">* console.error</button>
     <button onclick="consoleGroupEnd()">console.groupEnd</button>
-</div>
-<div class="groupement">
+  </div>
+  <div class="groupement">
     <button class="with-value" onclick="consoleCount()">* console.count("label")</button>
     <button class="with-value" onclick="consoleReset()">* console.reset("label")</button>
-</div>
-<div class="groupement">
+  </div>
+  <div class="groupement">
     <button class="with-value" onclick="consoleStartTime()">* console.startTime("label")</button>
     <button class="with-value" onclick="consoleTimeLog()">* console.timeLog("label")</button>
     <button class="with-value" onclick="consoleStopTime()">* console.stopTime("label")</button>
-</div>
-<div class="groupement">
+  </div>
+  <div class="groupement">
     <button onclick="consoleStartProfile()">console start profile</button>
     <button onclick="consoleStopProfile()">console stop profile</button>
     <button onclick="consoleTrace()">console.trace</button>
     <button onclick="consoleDir()">console.dir</button>
     <button onclick="consoleAssert()">console.assert(une assertion)</button>
     <button onclick="consoleClear()">console.clear()</button>
-</div>
-<div class="groupement">
+  </div>
+  <div class="groupement">
     <button onclick="uneFonctionAvecDebugger()">debugguer fonction</button>
-</div>
-</body>
+  </div>
+  </body>
 </html>
