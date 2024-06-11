@@ -24,11 +24,7 @@
         }
         consoleGroup = () => {
             const saisie = recupererLaSaisie()
-            if (saisie) {
-                console.group(saisie)
-            } else {
-                console.group()
-            }
+            console.group(saisie)
         }
         consoleGroupEnd = () => {
             console.groupEnd()
@@ -39,11 +35,7 @@
         }
         consoleReset = () => {
             const saisie = recupererLaSaisie()
-            if (saisie) {
-                console.reset(saisie)
-            } else {
-                console.reset()
-            }
+            console.reset(saisie)
         }
         consoleLog = () => {
             const saisie = recupererLaSaisie()
@@ -97,9 +89,11 @@
         consoleClear = () => {
             console.clear()
         }
-        consoleAssert = () => {
-            const saisie = recupererLaSaisie()
-            console.assert(saisie.value)
+        consoleAssertTrue = () => {
+            console.assert(true, "une assertion vérifiée")
+        }
+        consoleAssertFalse = () => {
+            console.assert(false, "une assertion non vérifiée")
         }
         consoleTable = () => {
             console.log('console.log >')
@@ -148,7 +142,8 @@
     <button onclick="consoleStopProfile()">console stop profile</button>
     <button onclick="consoleTrace()">console.trace</button>
     <button onclick="consoleDir()">console.dir</button>
-    <button onclick="consoleAssert()">console.assert(une assertion)</button>
+    <button onclick="consoleAssertTrue()">console.assert(une assertion vraie)</button>
+    <button onclick="consoleAssertFalse()">console.assert(une assertion fausse)</button>
     <button onclick="consoleClear()">console.clear()</button>
   </div>
   <div class="groupement">

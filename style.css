@@ -2,7 +2,7 @@
     --background-color: #FFF;
     --foreground-color: #FFF;
     --button--background-color: #0056b3;
-    --button--background-hover-color: #0056b3;
+    --button--background-hover-color: #014899;
     --button--foreground-color: #FFF;
     --button_withValue--background-color: #008866;
     --button_withValue--background-hover-color: #005944;
@@ -47,7 +47,6 @@ button {
     border-radius: 5px;
     color: var(--button--foreground-color);
     background-color: var(--button--background-color);
-    transition: background-color 0.3s;
     cursor: pointer;
     margin-bottom: .5em;
     margin-right: .5em;
@@ -59,10 +58,12 @@ button.with-value {
 }
 
 button:hover {
+    transition: background-color 0.3s;
     background-color: var(--button--background-hover-color);
 }
 
 button.with-value:hover {
+    transition: background-color 0.3s;
     background-color: var(--button_withValue--background-hover-color);
 }
 
